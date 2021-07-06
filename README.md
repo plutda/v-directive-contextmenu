@@ -12,6 +12,9 @@ npm run serve
 
 ## example
 ```
+// bash
+npm i @pluto1219/v-contextmenu
+
 // main.js
 import Vue from 'vue'
 import contextmenu from 'v-contextmenu'
