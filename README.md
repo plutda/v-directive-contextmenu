@@ -17,7 +17,7 @@ npm i @pluto1219/v-contextmenu
 
 // main.js
 import Vue from 'vue'
-import contextmenu from 'v-contextmenu'
+import contextmenu from '@pluto1219/v-contextmenu'
 Vue.use(contextmenu)
 ```
 
