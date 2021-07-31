@@ -2,6 +2,9 @@ import './context-menu.css'
 
 function handleContext(e) {
   const { contextMenu, binding, vm } = this
+  if (contextMenu.children.length) {
+    contextMenu.removeChild(contextMenu.childNodes[0])
+  }
   const ul = document.createElement('ul')
   const target = e.target
 
@@ -44,10 +47,11 @@ function handleContext(e) {
   function cb(e) {
     const is_inner = contextMenu.contains(e.target)
     const is_menu_child = e.target.className === 'contextmenu-child'
-    if (!is_inner || is_menu_child) {
-      contextMenu.style.visibility = 'hidden'
-      contextMenu.removeChild(ul)
+    const has_child = contextMenu.childNodes[0]
+    if ((!is_inner || is_menu_child) && has_child) {
+      contextMenu.removeChild(contextMenu.childNodes[0])
       document.body.removeChild(contextMenu)
+      contextMenu.style.visibility = 'hidden'
       window.removeEventListener('click', cb)
     }
   }
