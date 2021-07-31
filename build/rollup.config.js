@@ -9,7 +9,7 @@ import replace from '@rollup/plugin-replace';
 import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import minimist from 'minimist';
-import css from 'rollup-plugin-css-only';
+import postcss from 'rollup-plugin-postcss';
 
 // Get browserslist config and remove ie from es build targets
 const esbrowserslist = fs.readFileSync('./.browserslistrc')
@@ -52,9 +52,6 @@ const baseConfig = {
       exclude: 'node_modules/**',
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
       babelHelpers: 'bundled',
-    },
-    css: {
-      output: 'v-contextmenu.css'
     }
   },
 };
@@ -104,7 +101,9 @@ if (!argv.format || argv.format === 'es') {
         ],
       }),
       commonjs(),
-      css(baseConfig.plugins.css)
+      postcss({
+        extensions: ['.css'],
+      })
     ],
   };
   buildFormats.push(esConfig);
@@ -135,8 +134,9 @@ if (!argv.format || argv.format === 'cjs') {
       ...baseConfig.plugins.postVue,
       babel(baseConfig.plugins.babel),
       commonjs(),
-      css(baseConfig.plugins.css)
-    ],
+      postcss({
+        extensions: ['.css'],
+      })    ],
   };
   buildFormats.push(umdConfig);
 }
@@ -165,7 +165,9 @@ if (!argv.format || argv.format === 'iife') {
           ecma: 5,
         },
       }),
-      css(baseConfig.plugins.css)
+      postcss({
+        extensions: ['.css'],
+      })
     ],
   };
   buildFormats.push(unpkgConfig);
