@@ -1,9 +1,10 @@
 # v-contextmenu
 
-Vue2.x自定义右键菜单 <br/>
+![](https://img.shields.io/static/v1?label=Vue2.x&message=80%&color=green)<br/>
+只依赖vuejs、简易的、自定义鼠标右键菜单的指令插件。 <br/>
 
 ```
-// preview
+// 可以下载源代码进行自定义，关键代码在src/lib目录，运行起来非常简单:
 git clone git@github.com:Plutda/v-contextmenu.git
 cd v-contextmenu
 npm install
@@ -13,11 +14,11 @@ npm run serve
 ## example
 ```
 // bash
-npm i @pluto1219/v-contextmenu
+npm i v-directive-contextmenu
 
 // main.js
 import Vue from 'vue'
-import contextmenu from '@pluto1219/v-contextmenu'
+import contextmenu from 'v-directive-contextmenu'
 Vue.use(contextmenu)
 ```
 
