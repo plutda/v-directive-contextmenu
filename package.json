@@ -1,6 +1,6 @@
 {
   "name": "v-directive-contextmenu",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/v-contextmenu.ssr.js",
   "browser": "dist/v-contextmenu.esm.js",

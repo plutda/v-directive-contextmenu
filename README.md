@@ -1,15 +1,7 @@
-# v-contextmenu
+# v-directive-contextmenu
 
 ![](https://img.shields.io/static/v1?label=Vue2.x&message=80%&color=green)<br/>
 只依赖vuejs、简易的、自定义鼠标右键菜单的指令插件。 <br/>
-
-```
-// 可以下载源代码进行自定义，关键代码在src/lib目录，运行起来非常简单:
-git clone git@github.com:Plutda/v-contextmenu.git
-cd v-contextmenu
-npm install
-npm run serve
-```
 
 ## example
 ```
@@ -51,4 +43,12 @@ export default ({
   </ul>
 </template>
 
+```
+
+```
+// 可以下载源代码进行自定义，关键代码在src/lib目录，运行起来非常简单:
+git clone git@github.com:Plutda/v-contextmenu.git
+cd v-contextmenu
+npm install
+npm run serve
 ```
