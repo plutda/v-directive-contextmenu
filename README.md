@@ -1,7 +1,9 @@
 # v-directive-contextmenu
-
 ![](https://img.shields.io/static/v1?label=Vue2.x&message=80%&color=green)<br/>
 只依赖vuejs、简易的、自定义鼠标右键菜单的指令插件。 <br/>
+
+
+### [live demo](https://codepen.io/pluto520/pen/BaRVxMe)
 
 ## example
 ```
